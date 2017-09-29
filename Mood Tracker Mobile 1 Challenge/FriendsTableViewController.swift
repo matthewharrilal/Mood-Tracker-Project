@@ -58,13 +58,13 @@ class FriendsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             if identifier == "displayMood" {
-//                print("User has tapped on an exisiting mood")
-//                let indexPath = tableView.indexPathForSelectedRow!
-//                
-//                var mood = user[indexPath.row]
-//                
-//                    let displayMoodViewController = segue.destination as! DisplayMood
-//                displayMoodViewController.mood = mood                
+                print("User has tapped on an exisiting mood")
+                let indexPath = tableView.indexPathForSelectedRow!
+                
+                var mood = user[indexPath.row]
+                
+                    let displayMoodViewController = segue.destination as! DisplayMood
+                displayMoodViewController.mood = mood                
                 
             }
             else if identifier == "addNote" {

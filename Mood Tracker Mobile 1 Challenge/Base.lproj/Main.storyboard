@@ -59,7 +59,7 @@
                     <navigationItem key="navigationItem" id="5WV-cE-dnX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lpi-jL-o1w">
                             <connections>
-                                <segue destination="Azh-9a-Efc" kind="show" identifier="displayMood" id="dy5-nF-2Wn"/>
+                                <segue destination="ZwR-Po-Jp6" kind="show" identifier="addNote" id="zjR-XZ-bqq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -183,6 +183,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gcC-iJ-sdW"/>
+        <segue reference="zjR-XZ-bqq"/>
     </inferredMetricsTieBreakers>
 </document>

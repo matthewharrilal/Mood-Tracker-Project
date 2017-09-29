@@ -59,7 +59,7 @@
                     <navigationItem key="navigationItem" id="5WV-cE-dnX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lpi-jL-o1w">
                             <connections>
-                                <segue destination="ZwR-Po-Jp6" kind="show" identifier="addNote" id="zjR-XZ-bqq"/>
+                                <segue destination="Azh-9a-Efc" kind="show" identifier="addNote" id="jCK-01-XDN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -136,10 +136,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woP-bw-mmp">
+                                <rect key="frame" x="155" y="287" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <segue destination="5GK-7H-U2l" kind="show" identifier="toFriends" id="oT0-a7-hot"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="hQO-Jj-XMz"/>
                     </view>
+                    <connections>
+                        <outlet property="friendsTextField" destination="gcb-vN-SXK" id="IPg-jr-Xby"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bgy-K7-m7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,6 +195,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zjR-XZ-bqq"/>
+        <segue reference="jCK-01-XDN"/>
+        <segue reference="gcC-iJ-sdW"/>
+        <segue reference="oT0-a7-hot"/>
     </inferredMetricsTieBreakers>
 </document>

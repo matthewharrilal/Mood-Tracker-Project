@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class AddFriendsViewController: UIViewController {
+    @IBOutlet weak var friendsTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,5 +18,17 @@ class AddFriendsViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let friendsTableViewController = segue.destination as! FriendsTableViewController
+        if let identifier = segue.identifier {
+            if identifier == "toFriends" {
+                let mood = User()
+                mood.name = friendsTextField.text ?? "Sorry no name"
+                friendsTableViewController.user.append(mood)
+                friendsTableViewController.tableView.reloadData()
+            }
+        }
     }
 }

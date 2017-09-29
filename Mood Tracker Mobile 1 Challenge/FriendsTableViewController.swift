@@ -22,6 +22,7 @@ class FriendsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(user)
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,7 +48,8 @@ class FriendsTableViewController: UITableViewController {
         let row = indexPath.row
         
         let note = user[row]
-        
+      
+        cell.textLabel?.text = note.name ?? "No other friends"
         cell.detailTextLabel?.text = note.mood
         
         return cell
@@ -64,7 +66,7 @@ class FriendsTableViewController: UITableViewController {
                 var mood = user[indexPath.row]
                 
                     let displayMoodViewController = segue.destination as! DisplayMood
-                displayMoodViewController.mood = mood                
+                displayMoodViewController.mood = mood
                 
             }
             else if identifier == "addNote" {
@@ -72,6 +74,7 @@ class FriendsTableViewController: UITableViewController {
             }
         }
     }
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         return
